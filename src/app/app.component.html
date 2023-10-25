@@ -1,0 +1,96 @@
+<title>Rent Dev app</title>
+
+<!-- <button class="btn btn-primary" type="submit" (click)="GETRentApi()">
+  Click here for expected Rent
+</button> -->
+<!-- <p>ExpectedRent for 3 BHK - {{ ExpectedRentDetails.threeBHK}} </p>
+<p>ExpectedRent for 2 BHK - {{ ExpectedRentDetails.twoBHK}} </p>
+<p>ExpectedRent for 1 BHK - {{ ExpectedRentDetails.oneBHK}} </p> -->
+
+<!-- <button class="btn btn-primary" type="submit" (click)="PostRentApi('threeBHK','17000')">
+  Click here to Update Rent</button> -->
+<!-- <p></p> --> 
+<!-- <div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <label>Pincode</label>
+      <input type="text" class="form-control" formControlName="fieldVal" />
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="onSearch()">
+      Search
+    </button>
+  </form>
+</div> -->
+<!-- <table mat-table [dataSource]="myDataArray">
+  <mat-header-cell>headeer-cell</mat-header-cell>
+  <mat-cell></mat-cell>
+
+  <mat-header-row></mat-header-row>
+  <mat-row></mat-row>
+
+</table> -->
+
+<!-- [dataSource]="myDataArray" -->
+
+<!-- <table mat-table [dataSource]="ExpectedRentDetails" class="mat-elevation-z8"> -->
+  
+  <!--* Columns -->
+  <!-- <ng-container [matColumnDef]="column" *ngFor="let column of Rent_table_header">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let emp"> {{emp[column]}} </td>
+  </ng-container> -->
+
+  <!-- <ng-container matColumnDef="Date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ThreeBHK">
+    <th mat-header-cell *matHeaderCellDef> ThreeBHK </th>
+    <td mat-cell *matCellDef="let element"> {{element.threeBHK}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="TwoBHK">
+    <th mat-header-cell *matHeaderCellDef> TwoBHK </th>
+    <td mat-cell *matCellDef="let element"> {{element.twoBHK}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="OneBHK">
+    <th mat-header-cell *matHeaderCellDef> OneBHK </th>
+    <td mat-cell *matCellDef="let element"> {{element.oneBHK}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="Rent_table_header">Header</tr>
+  <tr mat-row *matRowDef="let emprow; columns: Rent_table_header;"></tr> -->
+  <!-- <tr mat-footer-row *matFooterRowDef="displayedColumns">Column</tr> --> -->
+<!-- </table> -->
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+
+<!-- test table -->
+<!-- <table mat-table [dataSource]="EmpData" class="mat-elevation-z8 demo-table"> -->
+  <!-- <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let emp"> {{emp[column]}} </td>
+  </ng-container> -->
+
+  <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+  <!--* Header for each column -->
+  <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+  <!-- <tr mat-header-row *matHeaderRowDef="['Id','FirstName']"></tr> -->
+  <!--* Row Data  -->
+  <!-- <tr mat-row *matRowDef="let emprow; columns: displayedColumns;"></tr> -->
+<!-- </table> -->
+<br>
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+  <nav>
+    <ul>
+      <li><a routerLink="/employee-component" routerLinkActive="active" ariaCurrentWhenActive="page">Test Database Connection</a></li>
+      <li><a routerLink="/weather-component" routerLinkActive="active" ariaCurrentWhenActive="page">Test Backed Connection</a></li>
+      <li><a routerLink="/rentDetails-component" routerLinkActive="active" ariaCurrentWhenActive="page">RentDetails Component</a></li>
+    </ul>
+  </nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+
