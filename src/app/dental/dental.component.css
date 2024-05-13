@@ -1,0 +1,66 @@
+  .example-spacer {
+    flex: 100 100 auto;
+    text-align: center;
+  }
+  .demo-table {
+    width: 100%;
+  }
+  
+  .mat-column-Date {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+  .mat-column-Amount_Paid {
+    padding-left: 16px;
+    font-size: 20px;
+  }
+  
+  .mat-column-Source_Bank {
+    font-style: italic;
+  }
+  
+  .mat-column-Target_Bank {
+    width: 32px;
+    text-align: center;
+    font-weight: bold;
+  }
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  
+  /* :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  } */

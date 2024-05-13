@@ -1,0 +1,48 @@
+<mat-card>
+    <mat-card-content class="form">
+      <form [formGroup]="dentalRecordForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="Date">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="date">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field class ="Reason">
+          <mat-label>Reason</mat-label>
+          <input matInput 
+           placeholder="Braces"
+           formControlName="reason"
+           required>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="AmountCleared">
+          <mat-label>AmountCleared</mat-label>
+          <input matInput formControlName="AmountCleared">
+        </mat-form-field>
+        <br>
+        <mat-form-field class ="SourceBank">
+          <mat-label>Select Source bank</mat-label>
+          <mat-select formControlName="SourceBank">
+            <mat-option value="ICICI BANK">ICICI BANK</mat-option>
+            <mat-option value="INDIAN BANK">INDIAN BANK</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="TargetBank">
+          <mat-label>TargetBank</mat-label>
+          <input matInput formControlName="TargetBank">
+        </mat-form-field>
+        <p>Complete the form to enable button.</p>
+        <button mat-raised-button color="accent" type="submit" [disabled]="!dentalRecordForm.valid" 
+          class="example-button-row">
+            Add Record
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <p>Form Value: {{ dentalRecordForm.value | json }}</p>
+
+<p>Form Status: {{ dentalRecordForm.status }}</p>

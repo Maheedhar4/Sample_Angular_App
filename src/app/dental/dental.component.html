@@ -1,0 +1,123 @@
+<br>
+<p>
+    <mat-toolbar color="primary" >
+      <span class="example-spacer">Dental record</span>
+    </mat-toolbar>
+</p>
+  
+<!-- <section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button>Basic</button>
+      <button mat-raised-button color="primary">Primary</button>
+      <button mat-raised-button color="accent">Accent</button>
+      <button mat-raised-button color="warn">Warn</button>
+      <button mat-raised-button disabled>Disabled</button>
+      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+</section> -->
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+    <mat-tab label="Add new Record">
+      <app-dental-form></app-dental-form>
+    </mat-tab>
+    <mat-tab label="Fetch Dental Records">
+        <mat-card >
+            <mat-card-header align="center">
+              <mat-card-title align="center">Actions Buttons</mat-card-title>
+              <mat-card-subtitle align="center">Start</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions align="start">
+                <button mat-raised-button color="accent" (click)="fetchAllDentalRecords()">Get All Dental Records</button>
+                <button mat-raised-button color="accent" (click)="fetchTotalAmount()">Get Total Amount</button>
+            </mat-card-actions>
+            <mat-card-content align= "center">
+                <h2>Total Amount paid is ₹{{ totalAmount}}.00 only</h2>
+            </mat-card-content>
+        </mat-card>
+        <table mat-table [dataSource]="dentalRecords" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Date Column -->
+            <ng-container matColumnDef="Date">
+              <th mat-header-cell *matHeaderCellDef> Date </th>
+              <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+            </ng-container>
+        
+            <!-- Reason Column -->
+            <ng-container matColumnDef="Reason">
+                <th mat-header-cell *matHeaderCellDef> Reason </th>
+                <td mat-cell *matCellDef="let element"> {{element.Reason}} </td>
+            </ng-container>
+          
+            <!-- Amount Paid Column -->
+            <ng-container matColumnDef="AmountCleared">
+              <th mat-header-cell *matHeaderCellDef> Amount Paid </th>
+              <td mat-cell *matCellDef="let element"> {{element.AmountCleared}} </td>
+            </ng-container>
+          
+            <!-- Source Bank Column -->
+            <ng-container matColumnDef="SourceBank">
+              <th mat-header-cell *matHeaderCellDef> Source Bank </th>
+              <td mat-cell *matCellDef="let element"> {{element.SourceBank}} </td>
+            </ng-container>
+          
+            <!-- Target Bank Column -->
+            <ng-container matColumnDef="TargetBank">
+              <th mat-header-cell *matHeaderCellDef> Target Bank </th>
+              <td mat-cell *matCellDef="let element"> {{element.TargetBank}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: deepskyblue;"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </mat-tab>
+    
+    <mat-tab label="Third">
+        
+    </mat-tab>
+</mat-tab-group>
+
+
+  
+<!-- <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p> -->
+  
+  <!-- <p>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar-row>
+  
+      <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p> -->
+  
+  
