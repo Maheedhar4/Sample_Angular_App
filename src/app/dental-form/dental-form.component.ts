@@ -9,6 +9,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { JsonPipe} from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { DentalService } from 'src/services/dental.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { DentalRecords } from '../models/dental';
 
 @Component({
 	selector: 'app-dental-form',
@@ -22,6 +24,7 @@ import { DentalService } from 'src/services/dental.service';
 	styleUrl: './dental-form.component.css'
 })
 export class DentalFormComponent {
+	postId?: string;
 	dentalRecordForm = this.formBuilder.group(
 		{ 
 			date: ['', Validators.required],
@@ -32,13 +35,30 @@ export class DentalFormComponent {
 		});
 	
 	errorMessage = '';
-	
-	constructor(private formBuilder: FormBuilder, private dentalService: DentalService) {}
+	openSnackBar(message: string, action: string) {
+		this._snackBar.open(message, action);
+	}
+	constructor(private formBuilder: FormBuilder, 
+		private dentalService: DentalService,
+		private _snackBar: MatSnackBar
+
+	) {}
 	onSubmit() {
 		// TODO: Use EventEmitter with form value
 		console.warn(this.dentalRecordForm.value);
-		const JSONVALUE = JSON.stringify(this.dentalRecordForm.value);
-		console.log(typeof(JSONVALUE));
-		this.dentalService.createNewDentalRecord(this.dentalRecordForm.value);
+		const formValue = this.dentalRecordForm.value;
+		console.log(typeof(formValue));
+		//Call the post request to add the record
+		this.dentalService.createNewDentalRecord(formValue)
+			.subscribe({
+				next: (data: DentalRecords) => {
+					this.postId = data.id;
+					this.openSnackBar('Record was added successfully', 'close');
+				},
+				error: (error) => {
+					console.error('Error occurred:', error);
+					this.openSnackBar('Error in adding record', 'close');
+				}
+			});
 	}
 }

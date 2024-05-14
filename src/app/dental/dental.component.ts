@@ -45,22 +45,4 @@ export class DentalComponent {
 			this.totalAmount=data;
 		});
 	}
-
-
-	// //form
-	// checkoutForm = this.formBuilder.group({
-	// 	Date: '',
-	// 	Reason: '',
-	// 	AmountCleared: '',
-	// 	SourceBank: '',
-	// 	TargetBank:''
-	// });
-	// onSubmit(): void {
-	// 	// Process checkout data here
-	// 	// this.items = this.cartService.clearCart();
-	// 	// ^ Add snack bar here
-	// 	console.warn('Your order has been submitted', this.checkoutForm.value);
-	// 	this.checkoutForm.reset();
-	// }
-	
 }

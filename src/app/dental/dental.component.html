@@ -17,65 +17,64 @@
     </div>
 </section> -->
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+  <mat-tab label="Fetch Dental Records">
+    <mat-card >
+        <mat-card-header align="center">
+          <mat-card-title align="center">Actions Buttons</mat-card-title>
+          <mat-card-subtitle align="center">Start</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions align="start">
+            <button mat-raised-button color="accent" (click)="fetchAllDentalRecords()">Get All Dental Records</button>
+            <button mat-raised-button color="accent" (click)="fetchTotalAmount()">Get Total Amount</button>
+        </mat-card-actions>
+        <mat-card-content align= "center">
+            <h2>Total Amount paid is ₹{{ totalAmount}}.00 only</h2>
+        </mat-card-content>
+    </mat-card>
+    <table mat-table [dataSource]="dentalRecords" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Date Column -->
+        <ng-container matColumnDef="Date">
+          <th mat-header-cell *matHeaderCellDef> Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+        </ng-container>
+    
+        <!-- Reason Column -->
+        <ng-container matColumnDef="Reason">
+            <th mat-header-cell *matHeaderCellDef> Reason </th>
+            <td mat-cell *matCellDef="let element"> {{element.Reason}} </td>
+        </ng-container>
+      
+        <!-- Amount Paid Column -->
+        <ng-container matColumnDef="AmountCleared">
+          <th mat-header-cell *matHeaderCellDef> Amount Paid </th>
+          <td mat-cell *matCellDef="let element"> {{element.AmountCleared}} </td>
+        </ng-container>
+      
+        <!-- Source Bank Column -->
+        <ng-container matColumnDef="SourceBank">
+          <th mat-header-cell *matHeaderCellDef> Source Bank </th>
+          <td mat-cell *matCellDef="let element"> {{element.SourceBank}} </td>
+        </ng-container>
+      
+        <!-- Target Bank Column -->
+        <ng-container matColumnDef="TargetBank">
+          <th mat-header-cell *matHeaderCellDef> Target Bank </th>
+          <td mat-cell *matCellDef="let element"> {{element.TargetBank}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: deepskyblue;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  </mat-tab>
     <mat-tab label="Add new Record">
       <app-dental-form></app-dental-form>
     </mat-tab>
-    <mat-tab label="Fetch Dental Records">
-        <mat-card >
-            <mat-card-header align="center">
-              <mat-card-title align="center">Actions Buttons</mat-card-title>
-              <mat-card-subtitle align="center">Start</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-actions align="start">
-                <button mat-raised-button color="accent" (click)="fetchAllDentalRecords()">Get All Dental Records</button>
-                <button mat-raised-button color="accent" (click)="fetchTotalAmount()">Get Total Amount</button>
-            </mat-card-actions>
-            <mat-card-content align= "center">
-                <h2>Total Amount paid is ₹{{ totalAmount}}.00 only</h2>
-            </mat-card-content>
-        </mat-card>
-        <table mat-table [dataSource]="dentalRecords" class="mat-elevation-z8">
-
-            <!--- Note that these columns can be defined in any order.
-                  The actual rendered columns are set as a property on the row definition" -->
-          
-            <!-- Date Column -->
-            <ng-container matColumnDef="Date">
-              <th mat-header-cell *matHeaderCellDef> Date </th>
-              <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
-            </ng-container>
-        
-            <!-- Reason Column -->
-            <ng-container matColumnDef="Reason">
-                <th mat-header-cell *matHeaderCellDef> Reason </th>
-                <td mat-cell *matCellDef="let element"> {{element.Reason}} </td>
-            </ng-container>
-          
-            <!-- Amount Paid Column -->
-            <ng-container matColumnDef="AmountCleared">
-              <th mat-header-cell *matHeaderCellDef> Amount Paid </th>
-              <td mat-cell *matCellDef="let element"> {{element.AmountCleared}} </td>
-            </ng-container>
-          
-            <!-- Source Bank Column -->
-            <ng-container matColumnDef="SourceBank">
-              <th mat-header-cell *matHeaderCellDef> Source Bank </th>
-              <td mat-cell *matCellDef="let element"> {{element.SourceBank}} </td>
-            </ng-container>
-          
-            <!-- Target Bank Column -->
-            <ng-container matColumnDef="TargetBank">
-              <th mat-header-cell *matHeaderCellDef> Target Bank </th>
-              <td mat-cell *matCellDef="let element"> {{element.TargetBank}} </td>
-            </ng-container>
-          
-            <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: deepskyblue;"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-    </mat-tab>
-    
-    <mat-tab label="Third">
-        
+    <mat-tab label="Delete Record">
+        Under Construction
     </mat-tab>
 </mat-tab-group>
 

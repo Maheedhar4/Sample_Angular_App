@@ -7,6 +7,10 @@ import { DentalComponent } from './dental/dental.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
 	selector: 'app-root',
@@ -21,12 +25,19 @@ import {MatMenuModule} from '@angular/material/menu';
 		DentalComponent,
 		MatButtonModule,
 		MatCardModule,
-		MatMenuModule
+		MatMenuModule,
+		MatSidenavModule, 
+		MatCheckboxModule,
+		FormsModule,
+		MatIconModule
 	],
 })
 export class AppComponent {
-	title = 'Rent-front-end-dev';
+	// eslint-disable-next-line quotes
+	title = `Maheedhar's App`;
 	requestFinished = false;
+	events: string[] = [];
+	opened: boolean= false ;
 
 	public ExpectedRentDetails: ExpectedRent[]=[];
   

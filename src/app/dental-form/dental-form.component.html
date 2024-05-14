@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-content class="form">
-      <form [formGroup]="dentalRecordForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="dentalRecordForm" (ngSubmit)="onSubmit()" class="form-container">
         <mat-form-field class="Date">
           <mat-label>Choose a date</mat-label>
           <input matInput [matDatepicker]="picker" formControlName="date">

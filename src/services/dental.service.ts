@@ -7,7 +7,6 @@ import { DentalRecords } from 'src/app/models/dental';
 })
 export class DentalService{
 	private _url = 'http://localhost:5237';
-	postId?: string;
 	constructor(private http:HttpClient){}
     
 	getDentalRecords(){
@@ -24,10 +23,6 @@ export class DentalService{
 	}
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	createNewDentalRecord(body: any){
-		return this.http.post<DentalRecords>(this._url+ '/api/Dental/',body )
-			.subscribe(data => {
-				console.log('entered subscribe');
-				this.postId = data.id;
-			});
+		return this.http.post<DentalRecords>(this._url + '/api/Dental/', body);
 	}
 }
