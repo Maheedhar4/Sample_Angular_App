@@ -3,29 +3,47 @@
     text-align: center;
   }
   .demo-table {
-    width: 100%;
+    width: 32px;
+    /* padding-left: 24px;
+    padding-right: 24px; */
+    border: 5px solid #070707
   }
   
   .mat-column-Date {
-    width: 32px;
+    /* width: 32px; */
     border-right: 1px solid currentColor;
+    padding-left: 16px;
+    padding-right: 24px;
+    text-align: center;
+  }
+
+  .mat-column-Reason {
+    /* width: 32px; */
+    border-right: 1px solid currentColor;
+    padding-left: 16px;
     padding-right: 24px;
     text-align: center;
   }
   
-  .mat-column-Amount_Paid {
+  .mat-column-AmountCleared {
     padding-left: 16px;
     font-size: 20px;
-  }
-  
-  .mat-column-Source_Bank {
-    font-style: italic;
-  }
-  
-  .mat-column-Target_Bank {
-    width: 32px;
+    border-right: 1px solid currentColor;
     text-align: center;
     font-weight: bold;
+  }
+  
+  .mat-column-SourceBank {
+    font-style: italic;
+    border-right: 1px solid currentColor;
+    text-align: center;
+  }
+  
+  .mat-column-TargetBank {
+    /* width: 32px; */
+    text-align: center;
+    font-style: italic;
+    border-right: 1px solid currentColor;
   }
   section {
     display: table;

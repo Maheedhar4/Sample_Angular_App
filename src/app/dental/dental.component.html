@@ -27,10 +27,10 @@
             <button mat-raised-button color="accent" (click)="fetchAllDentalRecords()">Get All Dental Records</button>
         </mat-card-actions>
         <mat-card-content align= "center">
-            <h2>Total Amount paid is ₹{{ totalAmount}}.00 only <button mat-raised-button color="accent" (click)="fetchTotalAmount()">Refresh Total Amount</button></h2>
+          <h2>Total Amount paid is ₹{{ totalAmount}} only </h2><button mat-raised-button color="accent" (click)="fetchTotalAmount()">Refresh Total Amount</button>
         </mat-card-content>
     </mat-card>
-    <table mat-table [dataSource]="dentalRecords" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dentalRecords" class="mat-elevation-z8 demo-table">
 
         <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
