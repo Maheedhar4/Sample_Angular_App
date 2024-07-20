@@ -2,11 +2,18 @@
     flex: 100 100 auto;
     text-align: center;
   }
+  .card-table{
+    width: 100%;
+    align-items:center;
+    align-self: center;
+    padding-left: 50px;
+  }
   .demo-table {
     width: 32px;
     /* padding-left: 24px;
     padding-right: 24px; */
-    border: 5px solid #070707
+    border: 5px solid #070707;
+    align-self: center;
   }
   
   .mat-column-Date {
@@ -72,6 +79,12 @@
   }
   
   .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .delete-button-container {
     display: flex;
     justify-content: center;
     width: 120px;

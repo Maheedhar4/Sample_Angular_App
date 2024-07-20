@@ -1,0 +1,8 @@
+import { MatSnackBar } from "@angular/material/snack-bar";
+
+export class snackbarService {
+  constructor(private _snackBar: MatSnackBar) {}
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
+  }
+}

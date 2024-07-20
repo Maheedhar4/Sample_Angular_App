@@ -2,23 +2,22 @@
     <mat-card-content class="form">
       <form [formGroup]="dentalRecordForm" (ngSubmit)="onSubmit()" class="form-container">
         <mat-form-field class="Date">
-          <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="date">
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
+          <mat-label>Date of Visit</mat-label>
+          <input matInput type="date" formControlName="date">
+          <mat-hint>DD/MM/YYYY</mat-hint>
         </mat-form-field>
         <br>
         <mat-form-field class ="Reason">
-          <mat-label>Reason</mat-label>
-          <input matInput 
-           placeholder="Braces"
-           formControlName="reason"
-           required>
+          <mat-label>Select Reason for visit</mat-label>
+          <mat-select formControlName="reason">
+            <mat-option value="Braces">Braces</mat-option>
+            <mat-option value="Tooth Cleaning">Tooth Cleaning</mat-option>
+            <mat-option value="Miscellaneous">Miscellaneous</mat-option>
+          </mat-select>
         </mat-form-field>
         <br>
         <mat-form-field class="AmountCleared">
-          <mat-label>AmountCleared</mat-label>
+          <mat-label>Amount Paid</mat-label>
           <input matInput formControlName="AmountCleared">
         </mat-form-field>
         <br>
@@ -27,17 +26,18 @@
           <mat-select formControlName="SourceBank">
             <mat-option value="ICICI BANK">ICICI BANK</mat-option>
             <mat-option value="INDIAN BANK">INDIAN BANK</mat-option>
+            <mat-option value="HDFC BANK">HDFC BANK</mat-option>
           </mat-select>
         </mat-form-field>
         <br>
         <mat-form-field class="TargetBank">
-          <mat-label>TargetBank</mat-label>
+          <mat-label>Input Target Bank</mat-label>
           <input matInput formControlName="TargetBank">
         </mat-form-field>
         <p>Complete the form to enable button.</p>
         <button mat-raised-button color="accent" type="submit" [disabled]="!dentalRecordForm.valid" 
           class="example-button-row">
-            Add Record
+            Add Visit
         </button>
       </form>
     </mat-card-content>

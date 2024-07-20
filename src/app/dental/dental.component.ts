@@ -1,5 +1,4 @@
-import { Component } from "@angular/core";
-import { MatIconModule } from "@angular/material/icon";
+import { Component, OnInit } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTableModule } from "@angular/material/table";
@@ -13,14 +12,14 @@ import { DentalService } from "src/services/dental.service";
 import { DentalRecords } from "../models/dental";
 import { ReactiveFormsModule } from "@angular/forms";
 import { DentalFormComponent } from "../dental-form/dental-form.component";
-import { ObjectId } from "bson";
+import { MatIconModule } from "@angular/material/icon";
+import { DialogComponent } from "../dialog/dialog.component";
 @Component({
   selector: "app-dental",
   standalone: true,
   imports: [
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule,
     MatTableModule,
     MatCardModule,
     MatTabsModule,
@@ -30,36 +29,61 @@ import { ObjectId } from "bson";
     ReactiveFormsModule,
     MatSelectModule,
     DentalFormComponent,
+    MatIconModule,
+    DialogComponent,
   ],
   templateUrl: "./dental.component.html",
   styleUrl: "./dental.component.css",
+  providers: [DialogComponent],
 })
-export class DentalComponent {
-  value = "Clear me";
+export class DentalComponent implements OnInit {
   displayedColumns: string[] = [
     "Date",
     "Reason",
     "AmountCleared",
     "SourceBank",
     "TargetBank",
+    "Actions",
   ];
   dentalRecords: DentalRecords[] = [];
   public totalAmount: number = 0;
-  bsonObjectId: string = "";
-  constructor(private dentalService: DentalService) {}
+
+  constructor(
+    private dentalService: DentalService,
+    private dialog: DialogComponent
+  ) {}
+  ngOnInit(): void {
+    this.displayDentalRecords();
+  }
   // Fetches all dental records
-  fetchAllDentalRecords() {
+  displayDentalRecords() {
     this.dentalService.getDentalRecords().subscribe((data) => {
       this.dentalRecords = data;
-      console.log(data);
-      const backedResponse = data[0].Id;
-      console.log(typeof backedResponse);
+      console.warn(data);
     });
+    this.displayTotalAmount();
   }
   //fetches total amount
-  fetchTotalAmount() {
+  displayTotalAmount() {
     this.dentalService.getTotalAmount().subscribe((data) => {
       this.totalAmount = data;
+      this.dialog.openSnackBar(
+        `Total amount is ₹${this.totalAmount}`,
+        "close",
+        3000
+      );
+    });
+  }
+  deleteDentalRecord(date: string) {
+    this.dentalService.deleteDentalRecord(date).subscribe({
+      next: (value) => {
+        this.dialog.openSnackBar(`Deleted Successfully ${value}`, "close");
+        console.log("delete", value);
+      },
+      error: (err) => {
+        this.dialog.openSnackBar(`Error while Deleting ${err}`, "close");
+        console.log("err", err);
+      },
     });
   }
 }

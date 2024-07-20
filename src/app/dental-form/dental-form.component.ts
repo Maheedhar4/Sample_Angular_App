@@ -1,22 +1,23 @@
-import { Component } from "@angular/core";
+import { Component, importProvidersFrom } from "@angular/core";
 import {
   FormBuilder,
   Validators,
   FormsModule,
   ReactiveFormsModule,
+  FormGroup,
 } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatCardModule } from "@angular/material/card";
 import { MatSelectModule } from "@angular/material/select";
 import { JsonPipe } from "@angular/common";
 import { MatButtonModule } from "@angular/material/button";
 import { DentalService } from "src/services/dental.service";
-import { MatSnackBar } from "@angular/material/snack-bar";
+
 import { DentalRecords } from "../models/dental";
 import moment from "moment"; // Import moment.js for date formatting
+import { DialogComponent } from "src/app/dialog/dialog.component";
 
 @Component({
   selector: "app-dental-form",
@@ -27,14 +28,15 @@ import moment from "moment"; // Import moment.js for date formatting
     MatNativeDateModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDatepickerModule,
     MatCardModule,
     MatSelectModule,
     JsonPipe,
     MatButtonModule,
+    DialogComponent,
   ],
   templateUrl: "./dental-form.component.html",
   styleUrl: "./dental-form.component.css",
+  providers: [DialogComponent],
 })
 export class DentalFormComponent {
   postId?: {
@@ -51,15 +53,15 @@ export class DentalFormComponent {
     TargetBank: ["", Validators.required],
   });
 
-  errorMessage = "";
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
-  }
   constructor(
     private formBuilder: FormBuilder,
     private dentalService: DentalService,
-    private _snackBar: MatSnackBar
+    private _snackBar: DialogComponent
   ) {}
+  // reset form values
+  reset(form: FormGroup) {
+    form.reset();
+  }
   onSubmit() {
     // TODO: Use EventEmitter with form value
 
@@ -73,15 +75,16 @@ export class DentalFormComponent {
     }
     console.info(this.dentalRecordForm.value);
     //Call the post request to add the record
-    this.dentalService.createNewDentalRecord(formValue).subscribe({
+    this.dentalService.addDentalRecord(formValue).subscribe({
       next: (data: DentalRecords) => {
         this.postId = data.Id;
-        this.openSnackBar("Record was added successfully", "close");
+        this._snackBar.openSnackBar("Record was added successfully", "close");
       },
       error: (error) => {
         console.error("Error occurred:", error);
-        this.openSnackBar("Error in adding record", "close");
+        this._snackBar.openSnackBar("Error in adding record", "close");
       },
     });
+    this.reset(this.dentalRecordForm);
   }
 }
