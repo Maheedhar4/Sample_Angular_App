@@ -2,12 +2,15 @@
   "name": "skynet",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "prebuild:prod": "rm -rf node_modules && npm ci",
+    "build:prod":"rm -rf dist && ng build --configuration production --stats-json",
     "start": "ng serve --configuration production",
     "prestart": "npm run build",
-    "build": "rm -rf dist && ng build --stats-json",
+    "build": "rm -rf dist && ng build--stats-json",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "npm run build:prod && cp -r dist docs/",
+    "deploy":""
   },
   "private": true,
   "dependencies": {
