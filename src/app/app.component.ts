@@ -23,7 +23,7 @@ import { MatIconModule } from "@angular/material/icon";
   ],
 })
 export class AppComponent {
-  title = `Maheedhar's App`;
+  title = `Skynet`;
   events: string[] = [];
   opened: boolean = false;
 
