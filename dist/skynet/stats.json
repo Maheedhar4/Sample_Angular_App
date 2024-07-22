@@ -7874,24 +7874,24 @@
       ],
       "format": "esm"
     },
-    "src/app/dental/dental.component.css": {
-      "bytes": 1822,
+    "src/app/app.component.css": {
+      "bytes": 420,
       "imports": []
     },
-    "src/app/employee/employee.component.css": {
-      "bytes": 47,
+    "src/app/dental/dental.component.css": {
+      "bytes": 1822,
       "imports": []
     },
     "src/app/dental-form/dental-form.component.css": {
       "bytes": 834,
       "imports": []
     },
-    "src/app/rent-details/rent-details.component.css": {
+    "src/app/employee/employee.component.css": {
       "bytes": 47,
       "imports": []
     },
-    "src/app/app.component.css": {
-      "bytes": 420,
+    "src/app/rent-details/rent-details.component.css": {
+      "bytes": 47,
       "imports": []
     },
     "node_modules/zone.js/fesm2015/zone.js": {
@@ -8695,6 +8695,16 @@
       },
       "bytes": 505387
     },
+    "app.component-WT3NXPNJ.css": {
+      "imports": [],
+      "inputs": {
+        "src/app/app.component.css": {
+          "bytesInOutput": 278
+        }
+      },
+      "bytes": 279,
+      "ng-component": true
+    },
     "dental.component-PC2LQW6Z.css": {
       "imports": [],
       "inputs": {
@@ -8703,16 +8713,6 @@
         }
       },
       "bytes": 1044,
-      "ng-component": true
-    },
-    "employee.component-4P4EPJMW.css": {
-      "imports": [],
-      "inputs": {
-        "src/app/employee/employee.component.css": {
-          "bytesInOutput": 36
-        }
-      },
-      "bytes": 37,
       "ng-component": true
     },
     "dental-form.component-GKAAOEYO.css": {
@@ -8725,6 +8725,16 @@
       "bytes": 328,
       "ng-component": true
     },
+    "employee.component-4P4EPJMW.css": {
+      "imports": [],
+      "inputs": {
+        "src/app/employee/employee.component.css": {
+          "bytesInOutput": 36
+        }
+      },
+      "bytes": 37,
+      "ng-component": true
+    },
     "rent-details.component-OJGOJLRB.css": {
       "imports": [],
       "inputs": {
@@ -8733,16 +8743,6 @@
         }
       },
       "bytes": 37,
-      "ng-component": true
-    },
-    "app.component-WT3NXPNJ.css": {
-      "imports": [],
-      "inputs": {
-        "src/app/app.component.css": {
-          "bytesInOutput": 278
-        }
-      },
-      "bytes": 279,
       "ng-component": true
     },
     "polyfills-6EAL64PA.js": {
