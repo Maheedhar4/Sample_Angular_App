@@ -7878,19 +7878,19 @@
       "bytes": 420,
       "imports": []
     },
-    "src/app/dental/dental.component.css": {
-      "bytes": 1822,
-      "imports": []
-    },
     "src/app/dental-form/dental-form.component.css": {
       "bytes": 834,
       "imports": []
     },
-    "src/app/employee/employee.component.css": {
-      "bytes": 47,
+    "src/app/dental/dental.component.css": {
+      "bytes": 1822,
       "imports": []
     },
     "src/app/rent-details/rent-details.component.css": {
+      "bytes": 47,
+      "imports": []
+    },
+    "src/app/employee/employee.component.css": {
       "bytes": 47,
       "imports": []
     },
@@ -8705,16 +8705,6 @@
       "bytes": 279,
       "ng-component": true
     },
-    "dental.component-PC2LQW6Z.css": {
-      "imports": [],
-      "inputs": {
-        "src/app/dental/dental.component.css": {
-          "bytesInOutput": 1043
-        }
-      },
-      "bytes": 1044,
-      "ng-component": true
-    },
     "dental-form.component-GKAAOEYO.css": {
       "imports": [],
       "inputs": {
@@ -8725,20 +8715,30 @@
       "bytes": 328,
       "ng-component": true
     },
-    "employee.component-4P4EPJMW.css": {
+    "dental.component-PC2LQW6Z.css": {
       "imports": [],
       "inputs": {
-        "src/app/employee/employee.component.css": {
-          "bytesInOutput": 36
+        "src/app/dental/dental.component.css": {
+          "bytesInOutput": 1043
         }
       },
-      "bytes": 37,
+      "bytes": 1044,
       "ng-component": true
     },
     "rent-details.component-OJGOJLRB.css": {
       "imports": [],
       "inputs": {
         "src/app/rent-details/rent-details.component.css": {
+          "bytesInOutput": 36
+        }
+      },
+      "bytes": 37,
+      "ng-component": true
+    },
+    "employee.component-4P4EPJMW.css": {
+      "imports": [],
+      "inputs": {
+        "src/app/employee/employee.component.css": {
           "bytesInOutput": 36
         }
       },

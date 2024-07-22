@@ -6,7 +6,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "deploy": "git add . && git commit -m 'Mon Jul 22 09:56:48 PM IST 2024' && git push"
+    "predeploy": "cp -f ./docs/index.html ./docs/404.html",
+    "deploy": "git add . && git commit -m 'Mon Jul 22 10:02:39 PM IST 2024' && git push"
   },
   "keywords": [],
   "author": "maheedharb69@gmail.com",
