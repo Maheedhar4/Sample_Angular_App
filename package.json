@@ -6,7 +6,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "deploy": "git add . && git commit -m 'Sun Jul 21 09:24:32 PM IST 2024' && git push"
+    "deploy": "git add . && git commit -m 'Mon Jul 22 09:43:53 PM IST 2024' && git push"
   },
   "keywords": [],
   "author": "maheedharb69@gmail.com",
