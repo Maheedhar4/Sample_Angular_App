@@ -7238,13 +7238,34 @@
       ],
       "format": "esm"
     },
+    "node_modules/moment/moment.js": {
+      "bytes": 146013,
+      "imports": [
+        {
+          "path": "<runtime>",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    "src/configurations/env.ts": {
+      "bytes": 507,
+      "imports": [],
+      "format": "esm"
+    },
     "src/services/dental.service.ts": {
-      "bytes": 1707,
+      "bytes": 1519,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
           "kind": "import-statement",
           "original": "@angular/core"
+        },
+        {
+          "path": "src/configurations/env.ts",
+          "kind": "import-statement",
+          "original": "src/configurations/env"
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -7258,17 +7279,6 @@
         }
       ],
       "format": "esm"
-    },
-    "node_modules/moment/moment.js": {
-      "bytes": 146013,
-      "imports": [
-        {
-          "path": "<runtime>",
-          "kind": "import-statement",
-          "external": true
-        }
-      ],
-      "format": "cjs"
     },
     "src/app/dental-form/dental-form.component.ts": {
       "bytes": 8376,
@@ -7382,7 +7392,7 @@
       "format": "esm"
     },
     "src/app/dental/dental.component.ts": {
-      "bytes": 15150,
+      "bytes": 15054,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -7453,6 +7463,11 @@
           "path": "node_modules/@angular/material/fesm2022/tooltip.mjs",
           "kind": "import-statement",
           "original": "@angular/material/tooltip"
+        },
+        {
+          "path": "node_modules/moment/moment.js",
+          "kind": "import-statement",
+          "original": "moment"
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -7670,12 +7685,17 @@
       "format": "esm"
     },
     "src/services/employee-service.ts": {
-      "bytes": 762,
+      "bytes": 780,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
           "kind": "import-statement",
           "original": "@angular/core"
+        },
+        {
+          "path": "src/configurations/env.ts",
+          "kind": "import-statement",
+          "original": "src/configurations/env"
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -7727,12 +7747,17 @@
       "format": "esm"
     },
     "src/services/weather-services.ts": {
-      "bytes": 757,
+      "bytes": 771,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
           "kind": "import-statement",
           "original": "@angular/core"
+        },
+        {
+          "path": "src/configurations/env.ts",
+          "kind": "import-statement",
+          "original": "src/configurations/env"
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -7784,12 +7809,17 @@
       "format": "esm"
     },
     "src/services/rentDetails-service.ts": {
-      "bytes": 995,
+      "bytes": 1110,
       "imports": [
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
           "kind": "import-statement",
           "original": "@angular/core"
+        },
+        {
+          "path": "src/configurations/env.ts",
+          "kind": "import-statement",
+          "original": "src/configurations/env"
         },
         {
           "path": "node_modules/@angular/core/fesm2022/core.mjs",
@@ -8000,12 +8030,16 @@
       ],
       "format": "esm"
     },
-    "src/app/dental-form/dental-form.component.css": {
-      "bytes": 834,
+    "src/app/employee/employee.component.css": {
+      "bytes": 47,
       "imports": []
     },
     "src/app/dental/dental.component.css": {
       "bytes": 2041,
+      "imports": []
+    },
+    "src/app/dental-form/dental-form.component.css": {
+      "bytes": 834,
       "imports": []
     },
     "src/app/app.component.css": {
@@ -8013,10 +8047,6 @@
       "imports": []
     },
     "src/app/rent-details/rent-details.component.css": {
-      "bytes": 47,
-      "imports": []
-    },
-    "src/app/employee/employee.component.css": {
       "bytes": 47,
       "imports": []
     },
@@ -8070,14 +8100,14 @@
     }
   },
   "outputs": {
-    "main-MGJIUQKL.js": {
+    "main-UNRA5DVQ.js": {
       "imports": [
         {
-          "path": "chunk-GAWHMKXH.js",
+          "path": "chunk-T5S2PBL7.js",
           "kind": "import-statement"
         },
         {
-          "path": "chunk-WQOWEHZE.js",
+          "path": "chunk-L74BKQNU.js",
           "kind": "dynamic-import"
         }
       ],
@@ -8109,7 +8139,7 @@
           "bytesInOutput": 16364
         },
         "src/app/dental/dental.component.ts": {
-          "bytesInOutput": 6900
+          "bytesInOutput": 6932
         },
         "node_modules/@angular/material/fesm2022/sidenav.mjs": {
           "bytesInOutput": 17507
@@ -8118,19 +8148,19 @@
           "bytesInOutput": 1914
         },
         "src/services/employee-service.ts": {
-          "bytesInOutput": 286
+          "bytesInOutput": 253
         },
         "src/app/employee/employee.component.ts": {
           "bytesInOutput": 2053
         },
         "src/services/weather-services.ts": {
-          "bytesInOutput": 288
+          "bytesInOutput": 251
         },
         "src/app/weather/weather.component.ts": {
           "bytesInOutput": 1967
         },
         "src/services/rentDetails-service.ts": {
-          "bytesInOutput": 451
+          "bytesInOutput": 463
         },
         "src/app/rent-details/rent-details.component.ts": {
           "bytesInOutput": 2288
@@ -8151,12 +8181,12 @@
           "bytesInOutput": 37
         }
       },
-      "bytes": 284954
+      "bytes": 284957
     },
-    "chunk-WQOWEHZE.js": {
+    "chunk-L74BKQNU.js": {
       "imports": [
         {
-          "path": "chunk-GAWHMKXH.js",
+          "path": "chunk-T5S2PBL7.js",
           "kind": "import-statement"
         }
       ],
@@ -8165,16 +8195,13 @@
       ],
       "entryPoint": "src/app/dental-form/dental-form.component.ts",
       "inputs": {
-        "node_modules/moment/moment.js": {
-          "bytesInOutput": 60883
-        },
         "src/app/dental-form/dental-form.component.ts": {
-          "bytesInOutput": 3434
+          "bytesInOutput": 3371
         }
       },
-      "bytes": 64784
+      "bytes": 3790
     },
-    "chunk-GAWHMKXH.js": {
+    "chunk-T5S2PBL7.js": {
       "imports": [],
       "exports": [
         "$",
@@ -8438,8 +8465,11 @@
         "zd"
       ],
       "inputs": {
+        "node_modules/moment/moment.js": {
+          "bytesInOutput": 61370
+        },
         "node_modules/@angular/core/fesm2022/primitives/signals.mjs": {
-          "bytesInOutput": 3375
+          "bytesInOutput": 3378
         },
         "node_modules/rxjs/dist/esm/internal/util/isFunction.js": {
           "bytesInOutput": 42
@@ -8454,7 +8484,7 @@
           "bytesInOutput": 63
         },
         "node_modules/rxjs/dist/esm/internal/Subscription.js": {
-          "bytesInOutput": 1289
+          "bytesInOutput": 1294
         },
         "node_modules/rxjs/dist/esm/internal/config.js": {
           "bytesInOutput": 142
@@ -8475,7 +8505,7 @@
           "bytesInOutput": 281
         },
         "node_modules/rxjs/dist/esm/internal/Subscriber.js": {
-          "bytesInOutput": 1571
+          "bytesInOutput": 1572
         },
         "node_modules/rxjs/dist/esm/internal/symbol/observable.js": {
           "bytesInOutput": 68
@@ -8502,13 +8532,13 @@
           "bytesInOutput": 270
         },
         "node_modules/rxjs/dist/esm/internal/observable/ConnectableObservable.js": {
-          "bytesInOutput": 741
+          "bytesInOutput": 743
         },
         "node_modules/rxjs/dist/esm/internal/util/ObjectUnsubscribedError.js": {
           "bytesInOutput": 105
         },
         "node_modules/rxjs/dist/esm/internal/Subject.js": {
-          "bytesInOutput": 1974
+          "bytesInOutput": 1975
         },
         "node_modules/rxjs/dist/esm/internal/BehaviorSubject.js": {
           "bytesInOutput": 309
@@ -8520,7 +8550,7 @@
           "bytesInOutput": 897
         },
         "node_modules/rxjs/dist/esm/internal/scheduler/Action.js": {
-          "bytesInOutput": 78
+          "bytesInOutput": 79
         },
         "node_modules/rxjs/dist/esm/internal/scheduler/intervalProvider.js": {
           "bytesInOutput": 215
@@ -8574,7 +8604,7 @@
           "bytesInOutput": 236
         },
         "node_modules/rxjs/dist/esm/internal/observable/innerFrom.js": {
-          "bytesInOutput": 1042
+          "bytesInOutput": 1043
         },
         "node_modules/rxjs/dist/esm/internal/util/executeSchedule.js": {
           "bytesInOutput": 138
@@ -8586,10 +8616,10 @@
           "bytesInOutput": 78
         },
         "node_modules/rxjs/dist/esm/internal/scheduled/scheduleObservable.js": {
-          "bytesInOutput": 47
+          "bytesInOutput": 48
         },
         "node_modules/rxjs/dist/esm/internal/scheduled/schedulePromise.js": {
-          "bytesInOutput": 47
+          "bytesInOutput": 48
         },
         "node_modules/rxjs/dist/esm/internal/scheduled/scheduleArray.js": {
           "bytesInOutput": 144
@@ -8607,7 +8637,7 @@
           "bytesInOutput": 185
         },
         "node_modules/rxjs/dist/esm/internal/observable/from.js": {
-          "bytesInOutput": 39
+          "bytesInOutput": 40
         },
         "node_modules/rxjs/dist/esm/internal/observable/of.js": {
           "bytesInOutput": 45
@@ -8640,10 +8670,10 @@
           "bytesInOutput": 424
         },
         "node_modules/rxjs/dist/esm/internal/operators/mergeInternals.js": {
-          "bytesInOutput": 380
+          "bytesInOutput": 381
         },
         "node_modules/rxjs/dist/esm/internal/operators/mergeMap.js": {
-          "bytesInOutput": 131
+          "bytesInOutput": 132
         },
         "node_modules/rxjs/dist/esm/internal/operators/mergeAll.js": {
           "bytesInOutput": 35
@@ -8655,31 +8685,31 @@
           "bytesInOutput": 43
         },
         "node_modules/rxjs/dist/esm/internal/observable/defer.js": {
-          "bytesInOutput": 54
+          "bytesInOutput": 55
         },
         "node_modules/rxjs/dist/esm/internal/observable/forkJoin.js": {
-          "bytesInOutput": 311
+          "bytesInOutput": 312
         },
         "node_modules/rxjs/dist/esm/internal/observable/fromEvent.js": {
-          "bytesInOutput": 649
+          "bytesInOutput": 650
         },
         "node_modules/rxjs/dist/esm/internal/observable/timer.js": {
           "bytesInOutput": 220
         },
         "node_modules/rxjs/dist/esm/internal/observable/merge.js": {
-          "bytesInOutput": 101
+          "bytesInOutput": 102
         },
         "node_modules/rxjs/dist/esm/internal/operators/filter.js": {
           "bytesInOutput": 92
         },
         "node_modules/rxjs/dist/esm/internal/operators/audit.js": {
-          "bytesInOutput": 286
+          "bytesInOutput": 287
         },
         "node_modules/rxjs/dist/esm/internal/operators/auditTime.js": {
           "bytesInOutput": 43
         },
         "node_modules/rxjs/dist/esm/internal/operators/catchError.js": {
-          "bytesInOutput": 200
+          "bytesInOutput": 201
         },
         "node_modules/rxjs/dist/esm/internal/operators/scanInternals.js": {
           "bytesInOutput": 159
@@ -8721,7 +8751,7 @@
           "bytesInOutput": 58
         },
         "node_modules/rxjs/dist/esm/internal/operators/share.js": {
-          "bytesInOutput": 648
+          "bytesInOutput": 650
         },
         "node_modules/rxjs/dist/esm/internal/operators/shareReplay.js": {
           "bytesInOutput": 223
@@ -8733,10 +8763,10 @@
           "bytesInOutput": 84
         },
         "node_modules/rxjs/dist/esm/internal/operators/switchMap.js": {
-          "bytesInOutput": 224
+          "bytesInOutput": 225
         },
         "node_modules/rxjs/dist/esm/internal/operators/takeUntil.js": {
-          "bytesInOutput": 101
+          "bytesInOutput": 102
         },
         "node_modules/rxjs/dist/esm/internal/operators/takeWhile.js": {
           "bytesInOutput": 120
@@ -8748,13 +8778,13 @@
           "bytesInOutput": 0
         },
         "node_modules/@angular/core/fesm2022/core.mjs": {
-          "bytesInOutput": 130544
+          "bytesInOutput": 130634
         },
         "node_modules/@angular/common/fesm2022/common.mjs": {
-          "bytesInOutput": 10018
+          "bytesInOutput": 10022
         },
         "node_modules/@angular/cdk/fesm2022/platform.mjs": {
-          "bytesInOutput": 3005
+          "bytesInOutput": 3006
         },
         "node_modules/@angular/cdk/fesm2022/keycodes.mjs": {
           "bytesInOutput": 95
@@ -8763,28 +8793,28 @@
           "bytesInOutput": 316
         },
         "node_modules/@angular/cdk/fesm2022/observers.mjs": {
-          "bytesInOutput": 2968
+          "bytesInOutput": 2969
         },
         "node_modules/@angular/cdk/fesm2022/layout.mjs": {
-          "bytesInOutput": 2956
+          "bytesInOutput": 2957
         },
         "node_modules/@angular/cdk/fesm2022/a11y.mjs": {
-          "bytesInOutput": 25435
+          "bytesInOutput": 25448
         },
         "node_modules/@angular/cdk/fesm2022/bidi.mjs": {
-          "bytesInOutput": 870
+          "bytesInOutput": 872
         },
         "node_modules/@angular/material/fesm2022/core.mjs": {
-          "bytesInOutput": 26704
+          "bytesInOutput": 26720
         },
         "node_modules/@angular/material/fesm2022/button.mjs": {
-          "bytesInOutput": 38438
+          "bytesInOutput": 38453
         },
         "node_modules/@angular/material/fesm2022/card.mjs": {
-          "bytesInOutput": 5809
+          "bytesInOutput": 5815
         },
         "node_modules/@angular/forms/fesm2022/forms.mjs": {
-          "bytesInOutput": 34152
+          "bytesInOutput": 34159
         },
         "node_modules/@angular/cdk/fesm2022/observers/private.mjs": {
           "bytesInOutput": 1229
@@ -8793,52 +8823,55 @@
           "bytesInOutput": 4122
         },
         "node_modules/@angular/material/fesm2022/form-field.mjs": {
-          "bytesInOutput": 74017
+          "bytesInOutput": 74079
         },
         "node_modules/@angular/cdk/fesm2022/text-field.mjs": {
-          "bytesInOutput": 1453
+          "bytesInOutput": 1454
         },
         "node_modules/@angular/material/fesm2022/input.mjs": {
-          "bytesInOutput": 5885
+          "bytesInOutput": 5887
         },
         "node_modules/@angular/cdk/fesm2022/collections.mjs": {
           "bytesInOutput": 2877
         },
         "node_modules/@angular/cdk/fesm2022/scrolling.mjs": {
-          "bytesInOutput": 5542
+          "bytesInOutput": 5546
         },
         "node_modules/@angular/cdk/fesm2022/overlay.mjs": {
-          "bytesInOutput": 38722
+          "bytesInOutput": 38744
         },
         "node_modules/@angular/cdk/fesm2022/portal.mjs": {
-          "bytesInOutput": 5308
+          "bytesInOutput": 5310
         },
         "node_modules/@angular/material/fesm2022/select.mjs": {
-          "bytesInOutput": 23069
+          "bytesInOutput": 23093
         },
         "node_modules/@angular/material/fesm2022/snack-bar.mjs": {
-          "bytesInOutput": 12719
+          "bytesInOutput": 12729
         },
         "src/app/dialog/dialog.component.ts": {
           "bytesInOutput": 410
         },
+        "src/configurations/env.ts": {
+          "bytesInOutput": 383
+        },
         "node_modules/@angular/common/fesm2022/http.mjs": {
-          "bytesInOutput": 19023
+          "bytesInOutput": 19024
         },
         "src/services/dental.service.ts": {
-          "bytesInOutput": 913
+          "bytesInOutput": 736
         }
       },
-      "bytes": 508835
+      "bytes": 570734
     },
-    "dental-form.component-GKAAOEYO.css": {
+    "employee.component-4P4EPJMW.css": {
       "imports": [],
       "inputs": {
-        "src/app/dental-form/dental-form.component.css": {
-          "bytesInOutput": 327
+        "src/app/employee/employee.component.css": {
+          "bytesInOutput": 36
         }
       },
-      "bytes": 328,
+      "bytes": 37,
       "ng-component": true
     },
     "dental.component-ASCKQZK7.css": {
@@ -8849,6 +8882,16 @@
         }
       },
       "bytes": 1157,
+      "ng-component": true
+    },
+    "dental-form.component-GKAAOEYO.css": {
+      "imports": [],
+      "inputs": {
+        "src/app/dental-form/dental-form.component.css": {
+          "bytesInOutput": 327
+        }
+      },
+      "bytes": 328,
       "ng-component": true
     },
     "app.component-KFLKALBX.css": {
@@ -8865,16 +8908,6 @@
       "imports": [],
       "inputs": {
         "src/app/rent-details/rent-details.component.css": {
-          "bytesInOutput": 36
-        }
-      },
-      "bytes": 37,
-      "ng-component": true
-    },
-    "employee.component-4P4EPJMW.css": {
-      "imports": [],
-      "inputs": {
-        "src/app/employee/employee.component.css": {
           "bytesInOutput": 36
         }
       },
